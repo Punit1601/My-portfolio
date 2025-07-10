@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Punit's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      position: relative;
+    }
+
+    
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 25px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      padding: 40px;
+      transition: 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #fff;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #ffd700;
+      margin-top: 5px;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+    }
+
+    .typing {
+      font-weight: bold;
+      color: #ffd700;
+      font-size: 1.2rem;
+    }
+
+    .project {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-left: 5px solid #ffd700;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .project:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    #contact p {
+      font-size: 1.05rem;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      section {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <video autoplay muted loop id="bg-video">
+    <source src="https://www.youtube.com/live/zA3nQBgXCrw?si=-tAJgcyZMZ4VLQ8m" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+
+  
+  <div class="overlay"></div>
+
+  
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="intro">
+    <h2>Welcome!</h2>
+    <p>Hello, I'm <strong>Punit Singh</strong>, a <span class="typing"></span></p>
+  </section>
+
+  
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I specialize in front-end development using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. My goal is to build user-friendly, responsive, and visually appealing websites.</p>
+  </section>
+
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A responsive, modern portfolio built with HTML, CSS, and JavaScript showcasing smooth animations and clean UI.</p>
+    </div>
+    <div class="project">
+      <h3>To-Do List App</h3>
+      <p>Interactive to-do list with local storage, written in Vanilla JavaScript. Includes edit/delete, filter options.</p>
+    </div>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>A real-time weather dashboard using OpenWeather API and styled with CSS Flexbox and Grid.</p>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:vspunitsingh1672@gmail.com">vspunitsingh1672@gmail.com</a></p>
+    <p><i class="fas fa-phone"></i> Phone: +91 8000000007</p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#">linkedin.com/in/punit</a></p>
+    <p><i class="fab fa-github"></i> GitHub: <a href="#">https://github.com/Punit1601/My-portfolio.git</a></p>
+  </section>
+
+  
+  <script>
+    const text = ["Web Developer", "Frontend Designer", "Tech Enthusiast"];
+    let i = 0, j = 0, currentText = '', isDeleting = false;
+    const typingSpan = document.querySelector('.typing');
+
+    function type() {
+      if (i < text.length) {
+        if (!isDeleting && j <= text[i].length) {
+          currentText = text[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          currentText = text[i].substring(0, j--);
+        }
+
+        typingSpan.textContent = currentText;
+
+        if (j === text[i].length) {
+          isDeleting = true;
+          setTimeout(type, 1000);
+        } else if (j === 0) {
+          isDeleting = false;
+          i = (i + 1) % text.length;
+          setTimeout(type, 300);
+        } else {
+          setTimeout(type, isDeleting ? 50 : 100);
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+
+</body>
+</html>
+
